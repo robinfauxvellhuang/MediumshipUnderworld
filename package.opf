@@ -1,0 +1,71 @@
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title id="id">Pengantar Mediumship dan Mite Dunia Bawah</dc:title>
+    <dc:creator id="id-1">Robin Fauxvell Huang</dc:creator>
+    <dc:identifier>calibre:27</dc:identifier>
+    <dc:identifier>uuid:6b49ede5-5024-4cda-b057-94f4e0e1787e</dc:identifier>
+    <dc:identifier id="uid">95a8dee5-0527-4cfa-ae2f-0ee047f54360</dc:identifier>
+    <dc:language>id</dc:language>
+    <dc:contributor id="id-6">calibre (8.7.0) [https://calibre-ebook.com]</dc:contributor>
+    <dc:date>2025-08-09T00:00:00+00:00</dc:date>
+    <dc:publisher>Akademi Sastra Fanfiction ASTRAFF</dc:publisher>
+    <opf:meta refines="#id" property="title-type">main</opf:meta>
+    <opf:meta refines="#id" property="file-as">Pengantar Mediumship dan Mite Dunia Bawah</opf:meta>
+    <meta property="dcterms:modified">2025-07-25T08:56:32Z</meta>
+    <meta name="Sigil version" content="2.6.0"/>
+    <opf:meta refines="#id-6" property="role" scheme="marc:relators">bkp</opf:meta>
+    <opf:meta refines="#id-1" property="role" scheme="marc:relators">aut</opf:meta>
+    <opf:meta refines="#id-1" property="file-as">Huang, Robin Fauxvell</opf:meta>
+  </metadata>
+  <manifest>
+    <item id="toc" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <!-- File utama yang berisi KONTEN -->
+    <item id="main" href="main.xhtml" media-type="application/xhtml+xml"/>
+    <!-- File sampul depan -->
+    <item id="cover1" href="cover1.xhtml" media-type="application/xhtml+xml"/>
+    <!-- Tambahkan properties="cover-image" untuk sampul utama -->
+    <item id="cover2" href="cover2.xhtml" media-type="application/xhtml+xml"/>
+    <!-- File bab -->
+    <item id="mesopotamia" href="mesopotamia.xhtml" media-type="application/xhtml+xml"/>
+    <item id="katabasis" href="katabasis.xhtml" media-type="application/xhtml+xml"/>
+    <item id="diyu" href="diyu.xhtml" media-type="application/xhtml+xml"/>
+    <item id="mediumship" href="mediumship.xhtml" media-type="application/xhtml+xml"/>
+    <item id="jiwa" href="jiwa.xhtml" media-type="application/xhtml+xml"/>
+    <item id="penyihir-endor" href="penyihir-endor.xhtml" media-type="application/xhtml+xml"/>
+    <!-- File gambar penutup -->
+    <item id="closing_image" href="closing_image.xhtml" media-type="application/xhtml+xml"/>
+    <!-- Jangan lupa semua gambar dan CSS juga harus terdaftar -->
+    <item id="image2.png" href="image2.png" media-type="image/png"/>
+    <item id="image8.png" href="image8.png" media-type="image/png"/>
+    <item id="image1.png" href="image1.png" media-type="image/png"/>
+    <item id="image5.png" href="image5.png" media-type="image/png"/>
+    <item id="image9.png" href="image9.png" media-type="image/png"/>
+    <item id="image3.png" href="image3.png" media-type="image/png"/>
+    <item id="image4.png" href="image4.png" media-type="image/png"/>
+    <item id="image7.png" href="image7.png" media-type="image/png"/>
+    <item id="image6.png" href="image6.png" media-type="image/png"/>
+    <item id="style.css" href="style.css" media-type="text/css"/>
+    <item href="cover.jpg" id="cover" media-type="image/jpeg" properties="cover-image"/>
+    <item id="id-2" href="Empiric-Roman.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="id-3" href="FZShuSong-Z01.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="id-4" href="SAGONABOOK.ttf" media-type="application/vnd.ms-opentype"/>
+    <item id="id-5" href="SAGONABOOKITALIC.ttf" media-type="application/vnd.ms-opentype"/>
+  </manifest>
+  <spine>
+    <!-- Urutan baca di e-reader -->
+    <itemref idref="cover1"/>
+    <!-- Sampul depan pertama -->
+    <itemref idref="cover2"/>
+    <!-- Sampul depan kedua -->
+    <itemref idref="main"/>
+    <!-- Halaman KONTEN -->
+    <itemref idref="mesopotamia"/>
+    <itemref idref="katabasis"/>
+    <itemref idref="diyu"/>
+    <itemref idref="mediumship"/>
+    <itemref idref="jiwa"/>
+    <itemref idref="penyihir-endor"/>
+    <itemref idref="closing_image"/>
+    <!-- Gambar penutup di akhir -->
+  </spine>
+</package>

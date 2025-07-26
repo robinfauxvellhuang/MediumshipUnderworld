@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EPUB Reader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reader-ui.css" />
+  </head>
+  <body>
+    <div id="reader-container">
+      <aside id="sidebar">
+        <div class="sidebar-header">
+          <h3 id="toc-heading">Konten</h3>
+          <button
+            type="button"
+            id="close-sidebar-btn"
+            aria-label="Tutup Daftar Isi"
+          >
+            &times;
+          </button>
+        </div>
+        <nav id="toc-nav" aria-labelledby="toc-heading"></nav>
+      </aside>
+
+      <main id="main-content">
+        <div id="content-area">
+          <div class="loader">⏳Memuat...</div>
+        </div>
+      </main>
+
+      <footer id="navigation">
+        <button type="button" id="toc-btn" class="nav-btn">📖</button>
+        <div class="page-controls">
+          <button type="button" id="prev-btn" class="nav-btn">‹ Prev</button>
+          <span id="progress-indicator"></span>
+          <button type="button" id="next-btn" class="nav-btn">Next ›</button>
+        </div>
+        <div class="settings-control">
+          <button
+            type="button"
+            id="settings-btn"
+            class="nav-btn"
+            aria-label="Pengaturan"
+          >
+            🪞
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Panel Pengaturan yang sudah disederhanakan -->
+    <div id="settings-panel-overlay">
+      <div id="settings-panel">
+        <div class="settings-header">
+          <h2>Pengaturan Tampilan</h2>
+          <button
+            type="button"
+            id="close-settings-btn"
+            aria-label="Tutup Pengaturan"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="settings-body">
+          <div class="setting-group">
+            <label>Ukuran Font</label>
+            <div class="button-group">
+              <button type="button" id="font-decrease-btn">A-</button>
+              <span id="font-size-display">100%</span>
+              <button type="button" id="font-increase-btn">A+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="reader.js"></script>
+  </body>
+</html>

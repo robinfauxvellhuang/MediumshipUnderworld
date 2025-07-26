@@ -1,0 +1,225 @@
+/* style.css */
+
+/* Deklarasi Font Kustom */
+@font-face {
+    font-family: 'Empiric Roman'; /* Nama font yang akan digunakan di CSS */
+    src: url('Empiric-Roman.ttf') format('truetype'); /* Path ke file font */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FZShuSong'; /* Nama font untuk karakter Cina */
+    src: url('FZShuSong-Z01.ttf') format('truetype'); /* Path ke file font */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sagona Book Italic'; /* Font untuk quote-text */
+    src: url('SAGONABOOKITALIC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic; /* Penting: atur style-nya italic sesuai nama font */
+}
+
+@font-face {
+    font-family: 'Sagona Book'; /* Font untuk quote-source */
+    src: url('SAGONABOOK.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Gaya dasar untuk body */
+body {
+    font-family: 'Georgia', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font utama, sesuai preferensi di dokumen asli */
+    line-height: 1.6; /* Kerapatan baris untuk keterbacaan */
+    margin: 0;
+    padding: 1em 2em;
+}
+
+/* Gaya untuk semua heading (h1-h6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Empiric Roman', 'Merriweather'; /* Font kustom untuk judul, dengan fallback */
+    color: #000000;
+    text-align: center; /* Judul rata tengah */
+    page-break-after: avoid; /* Mencegah judul terpotong di akhir halaman */
+    margin-top: 1.5em; /* Spasi atas judul */
+    margin-bottom: 0.5em; /* Spasi bawah judul */
+}
+
+/* Gaya spesifik untuk judul bab (h1.chapter-title) */
+.chapter-title {
+    font-size: 24pt;
+    font-weight: bold;
+    padding-top: 12pt;
+    padding-bottom: 12pt;
+    line-height: 1.5;
+}
+
+/* Gaya untuk paragraf normal */
+p {
+    font-size: 1em; /* Ukuran font standar */
+    margin-top: 1em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    text-indent: 1.5em; /* Ini yang bikin awal paragraf menjorok */
+    text-align: justify;
+    font-family: 'Georgia', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Paragraf pertama setelah heading tidak menjorok */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    text-indent: 0;
+}
+
+/* Gaya untuk baris kosong (pengganti c19) */
+.empty-line {
+    height: 10pt;
+}
+
+/* Gaya untuk teks miring */
+.italic {
+    font-style: italic;
+}
+
+/* Gaya untuk teks tebal */
+.bold {
+    font-weight: bold;
+}
+
+/* Gaya untuk teks Yunani dan Cina (jika perlu font khusus) */
+.greek {
+    font-family: sans-serif; /* Fallback font, bisa disesuaikan */
+}
+
+.chinese { /* Menerapkan font kustom untuk karakter Cina */
+    font-family: 'FZShuSong', sans-serif; /* Font kustom untuk Cina, dengan fallback */
+}
+
+
+/* Gaya untuk kutipan */
+.quote-text {
+    font-family: 'Sagona Book Italic', 'Georgia';
+    font-size: 0.8em; /* Ukuran font kutipan disamakan dengan paragraf normal */
+    margin-top: 1em;
+    margin-bottom: 0em;
+    margin-left: 3em; /* Menggunakan em untuk indentasi yang lebih konsisten */
+    margin-right: 3em; /* Menambahkan margin kanan juga untuk blok kutipan */
+    text-indent: 0em; /* Kutipan tidak menjorok */
+    text-align: justify;
+    font-style: italic;
+}
+
+/* Gaya untuk sumber kutipan */
+.quote-source {
+    font-family: 'Sagona Book', 'Georgia';
+    font-size: 0.8em; /* Ukuran font sumber kutipan sedikit lebih kecil dari kutipan utama */
+    margin-top: 0.5em; /* Sedikit spasi dari kutipan utama */
+    margin-bottom: 1em;
+    margin-left: 3em; /* Menyesuaikan indentasi dengan quote-text */
+    margin-right: 3em; /* Menyesuaikan indentasi dengan quote-text */
+    text-indent: 0em; /* Sumber kutipan tidak menjorok */
+    text-align: right; /* Rata kanan untuk sumber kutipan */
+    font-style: normal;
+}
+
+/* Gaya untuk daftar isi */
+.table-of-contents {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    text-align: left; /* Daftar isi rata kiri */
+}
+
+.table-of-contents ul {
+    list-style: none; /* Menghilangkan bullet default */
+    padding: 0;
+    margin: 0;
+}
+
+.table-of-contents li {
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+.table-of-contents a {
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    color: #000000; /* Warna link */
+}
+
+.table-of-contents a:hover {
+    text-decoration: underline; /* Garis bawah saat di-hover */
+}
+
+/* Gaya untuk bullet points */
+.bullet-list {
+    list-style-type: disc; /* Jenis bullet disc */
+    padding-left: 2.5em; /* Menggunakan padding-left untuk mengontrol indentasi bullet */
+    margin-left: 0; /* Menghilangkan margin-left agar padding-left bekerja efektif */
+    list-style-position: outside; /* Bullet di luar blok teks, teks akan menggantung */
+}
+
+.bullet-list li {
+    font-size: 1em; /* Ukuran font bullet list disamakan dengan paragraf normal */
+    margin-bottom: 0.5em;
+    text-align: justify;
+    text-indent: 0; /* List item tidak menjorok */
+    font-family: 'Georgia', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font yang sama dengan paragraf normal */
+}
+
+/* Gaya untuk container gambar */
+.image-container {
+    max-width: 250px;
+    text-align: center; /* Tengah gambar */
+    margin: 1em auto; /* Spasi atas dan bawah gambar */
+}
+
+.image-container img {
+    max-width: 100%; /* Gambar responsif, tidak melebihi lebar kontainer */
+    height: auto; /* Tinggi otomatis agar aspek rasio terjaga */
+    display: block; /* Menghilangkan spasi di bawah gambar */
+    margin: 0 auto; /* Tengah gambar */
+    border-radius: 8px; /* Contoh: Menambahkan sedikit rounded corner */
+}
+
+/* Gaya untuk halaman sampul */
+.cover-page {
+    page-break-after: always; /* Pastikan setiap gambar sampul ada di halaman terpisah */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Memastikan sampul mengisi tinggi viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-page img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Memastikan gambar pas tanpa terpotong atau terdistorsi */
+}
+
+/* Penyesuaian untuk elemen yang tadinya memiliki padding-top/bottom spesifik */
+p {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Kelas untuk menghilangkan page break after pada judul jika tidak diinginkan */
+.no-page-break-after {
+    page-break-after: auto;
+}
+
+/* Ini yang penting: setiap section (bab) akan dimulai di halaman baru */
+section {
+    display: block; /* Pastikan section dianggap sebagai blok */
+    break-before: page; /* Gunakan properti break-before yang lebih modern */
+    margin-top: 2em; /* Tambahkan sedikit margin atas untuk visualisasi page break yang lebih jelas */
+}
+
+/* Pastikan section pertama setelah cover tidak memiliki page-break-before */
+body > section:first-of-type {
+    break-before: auto; /* Jangan ada page break sebelum section pertama di body */
+    margin-top: 0;
+}
